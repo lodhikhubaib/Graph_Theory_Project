@@ -6,6 +6,7 @@ class SecondPage:
     def __init__(self, root, displayed=False):
         self.root = root
         self.root.title("Kruskal's Algorithm")
+        self.root.geometry(f"{1000}x{1000}")
         self.displayed = displayed  # Flag to indicate if the page has been displayed
 
         # Get screen width and height
@@ -17,7 +18,7 @@ class SecondPage:
         image_height = int(0.9 * screen_height)
 
         # Load the background image and resize it
-        background_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Gt Project\ivv.png")
+        background_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\ivv.png")
         image = background_image.resize((image_width, image_height), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
 
