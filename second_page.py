@@ -18,7 +18,7 @@ class SecondPage:
         image_height = int(0.9 * screen_height)
 
         # Load the background image and resize it
-        background_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\ivv.png")
+        background_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\ivv.png")
         image = background_image.resize((image_width, image_height), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
 
