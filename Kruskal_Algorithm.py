@@ -110,7 +110,7 @@ class GUI:
         
         #adding logo                 
         width, height = 200, 100
-        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\logo1.png")
+        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\logo1.png")
         resized_image = original_image.resize((width, height), Image.LANCZOS)
         self.logo_image = ImageTk.PhotoImage(resized_image)
         logo_label = tk.Label(self.window, image=self.logo_image)
