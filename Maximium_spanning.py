@@ -1,6 +1,7 @@
 import math
 import tkinter as tk
 import importlib
+from PIL import Image, ImageTk
 
 class Graph:
     def __init__(self, vertices):
@@ -51,6 +52,8 @@ class Graph:
 class GUI:
     def __init__(self):
         self.window = tk.Tk()
+        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\logo.png")
+        self.window.iconphoto(True, icon_image)
         self.window.title("Maximum Spanning Tree")
         self.canvas = tk.Canvas(self.window, width=600, height=400)
         self.canvas.pack()
@@ -89,6 +92,16 @@ class GUI:
         self.graph = None
         self.coords = {}
         self.radius = 20
+        
+        #adding logo                 
+        width, height = 200, 100
+        original_image = Image.open(r"C:\\Users\\HP\\OneDrive\\Desktop\\Gt Project\\connected\\logo1.png")
+        resized_image = original_image.resize((width, height), Image.LANCZOS)
+        self.logo_image = ImageTk.PhotoImage(resized_image)
+        logo_label = tk.Label(self.window, image=self.logo_image)
+        logo_label.place(x=0, y=0)
+
+        
 
     def add_edge(self):
         edge = self.entry2.get()
@@ -144,7 +157,7 @@ class GUI:
         self.window.destroy()
 
         # Import the standard graph module
-        standard_Graphs = importlib.import_module("max_sp_tr")
+        standard_Graphs = importlib.import_module("Maximium_Spanning_Tree")
 
         # Create an instance of the standard graph GUI
         standard_gui = standard_Graphs.GUI()
