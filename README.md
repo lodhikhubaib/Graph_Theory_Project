@@ -1,5 +1,10 @@
 # Graph_Theory_Project
 
+# Group Members Are:
+1) Muhammad Khubaib Khan Lodhi
+2) Aahil Ashiq Ali
+3) Khuzaima Ahsan
+
 # Graph Theory Project proposal
 
 Kruskal's Algorithm implementation for both connected and disconnected graphs in Python, with visualization using Matplotlib and Tkinter.
