@@ -1,7 +1,10 @@
 # Import tkinter module
 import math
+#import time
+#import resource
 import tkinter as tk
 from PIL import Image, ImageTk
+import importlib
 
 # Define Graph class
 class Graph:
@@ -59,11 +62,12 @@ class Graph:
                 self.union(parent, rank, x, y) # Union u and v
         return result
 
+
 # Define GUI class
 class GUI:
     def __init__(self):
         self.window = tk.Tk()
-        icon_image = tk.PhotoImage(file=r"C:\\Users\\HP\\OneDrive\Desktop\\python_codes\\logo.png")
+        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\logo.png")
         self.window.iconphoto(True, icon_image)
         self.window.title("Kruskal's Algorithm")
         self.canvas = tk.Canvas(self.window, width=600, height=400)
@@ -96,14 +100,17 @@ class GUI:
         self.button4.grid(row=5, column=0)
         self.button5 = tk.Button(self.frame, text="Quit", command=self.quit)
         self.button5.grid(row=5, column=1)
-
+        self.button5 = tk.Button(self.frame, text="Standard Graphs", command=self.Standard_graphs)
+        self.button5.grid(row=5, column=2)
+        self.button5 = tk.Button(self.frame, text="Disconnected Graph", command=self.Disconnected_graphs)
+        self.button5.grid(row=7, column=0)
         self.graph = None
         self.coords = {}
         self.radius = 20
         
         #adding logo                 
         width, height = 200, 100
-        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\python_codes\logo1.png")
+        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\logo1.png")
         resized_image = original_image.resize((width, height), Image.LANCZOS)
         self.logo_image = ImageTk.PhotoImage(resized_image)
         logo_label = tk.Label(self.window, image=self.logo_image)
@@ -163,6 +170,49 @@ class GUI:
     def quit(self):
         self.window.destroy() # Destroy main window
 
+    def Standard_graphs(self):
+        # Destroy the current window
+        self.window.destroy()
+
+        # Import the standard graph module
+        standard_Graphs = importlib.import_module("Kruskal_Standard")
+
+        # Create an instance of the standard graph GUI
+        standard_gui = standard_Graphs.GUI()
+
+        # Start the mainloop for the new GUI
+        standard_gui.window.mainloop()
+
+# for disconnected graphs
+    def Disconnected_graphs(self):
+        # Destroy the current window
+        self.window.destroy()
+
+        # Import the disconnected graph module
+        Disconnected_Graphs = importlib.import_module("Disconnected")
+
+        # Create an instance of the standard graph GUI
+        disconnected_gui = Disconnected_Graphs.GUI()
+
+        # Start the mainloop for the new GUI
+        disconnected_gui.window.mainloop()
+
+    '''    #for measuring execution time and memory usage for connected graphs
+    def run_kruskal_connected(num_vertices, edges):
+        graph = Graph(num_vertices)
+        for u, v, weight in edges:
+            graph.add_edge(u, v, weight)
+        start_time = time.time()
+        minimum_spanning_tree = graph.kruskal()
+        end_time = time.time()
+        execution_time = end_time - start_time
+        memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024  # in kilobytes
+        return execution_time, memory_usage
+
+        execution_time, memory_usage = run_kruskal_connected(num_vertices, edges)
+        print("Execution Time:", execution_time, "seconds")
+        print("Memory Usage:", memory_usage, "KB")'''
+        
     # Draw vertices on the canvas in a circular layout
     def draw_vertices(self):
         cx, cy = 300, 200 # Center of the circle
