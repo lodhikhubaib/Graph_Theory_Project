@@ -52,7 +52,7 @@ class Graph:
 class GUI:
     def __init__(self):
         self.window = tk.Tk()
-        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Gt Project\connected\logo.png")
+        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\logo.png")
         self.window.iconphoto(True, icon_image)
         self.window.title("Maximum Spanning Tree")
         self.canvas = tk.Canvas(self.window, width=600, height=400)
