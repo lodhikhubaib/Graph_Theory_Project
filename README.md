@@ -71,13 +71,13 @@ Uses Matplotlib to visualize the graphs and their spanning trees.
 
 # How to Use:
 
-1)Run the program.
+1) Run the program.
 
-2)Input the number of vertices.
+2) Input the number of vertices.
 
-3)Add edges with weights, remove edges, calculate Minimum Spanning Tree, draw graphs, and find Maximum Spanning Tree as needed.
+3) Add edges with weights, remove edges, calculate Minimum Spanning Tree, draw graphs, and find Maximum Spanning Tree as needed.
 
-4)The GUI allows interactive graph manipulation and visualization.
+4) The GUI allows interactive graph manipulation and visualization.
 
 
 This implementation enhances the basic Kruskal's Algorithm by adding a user interface and the ability to handle both connected and disconnected graphs. It provides a visual representation of the graphs and their spanning trees, making it easier to understand and analyze the algorithm's behavior.
