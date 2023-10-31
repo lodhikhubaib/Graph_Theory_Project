@@ -81,3 +81,10 @@ Uses Matplotlib to visualize the graphs and their spanning trees.
 
 
 This implementation enhances the basic Kruskal's Algorithm by adding a user interface and the ability to handle both connected and disconnected graphs. It provides a visual representation of the graphs and their spanning trees, making it easier to understand and analyze the algorithm's behavior.
+
+# Demo Video
+
+https://github.com/lodhikhubaib/Graph_Theory_Project/assets/88384068/dd6d0d23-e14e-4bc5-ae06-00c08739ecd3
+
+
+
