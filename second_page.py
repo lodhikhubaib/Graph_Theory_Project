@@ -43,6 +43,9 @@ class SecondPage:
         min_span_tree_dis_button = tk.Button(root, text="Minimum Spanning Tree for Disconnected Graph", command=self.Min_Spanning_algorithm_dis, font=("Helvetica", 18, "bold"))
         min_span_tree_dis_button.place(x=screen_width // 4, y=screen_height // 4 + image_height // 4 + 3 * button_spacing, anchor="w")
 
+        # Register the on_close method for the window closing event
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
+
     def Min_Spanning_algorithm(self):
         if not self.displayed:  # Check if the page has been displayed
             self.displayed = True  # Set the flag to True
@@ -67,7 +70,7 @@ class SecondPage:
             start_gui = start_algo.GUI()
             start_gui.window.mainloop()
             
-    def on_close(self, event=None):
+    def on_close(self):
         # Prompt the user with a Yes/No messagebox
         user_response = messagebox.askyesno("Confirmation", "Do you want to close the application?")
         if user_response:
@@ -79,5 +82,4 @@ class SecondPage:
 if __name__ == "__main__":
     root = tk.Tk()
     second_page = SecondPage(root)
-    root.protocol("WM_DELETE_WINDOW", second_page.on_close)
     root.mainloop()
