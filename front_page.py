@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import importlib
+from tkinter import Canvas, messagebox
 
 class FrontPage:
     def __init__(self, root):
@@ -30,9 +31,18 @@ class FrontPage:
         second_algo = importlib.import_module("second_page")
         second_page_instance = second_algo.SecondPage(tk.Tk())
         second_page_instance.root.mainloop()
-  
+        
+    def on_close(self, event=None):
+        # Prompt the user with a Yes/No messagebox
+        user_response = messagebox.askyesno("Confirmation", "Do you want to close the application?")
+        if user_response:
+            print("Tkinter application closed.")
+            self.root.destroy()
+
         
 if __name__ == "__main__":
     root = tk.Tk()
     front_page = FrontPage(root)
+    root.protocol("WM_DELETE_WINDOW", front_page.on_close)
+    #FrontPage.root.protocol("WM_DELETE_WINDOW", FrontPage.on_close)
     root.mainloop()
