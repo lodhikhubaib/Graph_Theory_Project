@@ -1,6 +1,7 @@
 from PIL import Image, ImageTk
 import tkinter as tk
 import importlib
+from tkinter import Canvas, messagebox
 
 class SecondPage:
     def __init__(self, root, displayed=False):
@@ -65,9 +66,18 @@ class SecondPage:
             start_algo = importlib.import_module("Disconnected")
             start_gui = start_algo.GUI()
             start_gui.window.mainloop()
+            
+    def on_close(self, event=None):
+        # Prompt the user with a Yes/No messagebox
+        user_response = messagebox.askyesno("Confirmation", "Do you want to close the application?")
+        if user_response:
+            print("Tkinter application closed.")
+            self.root.destroy()
+
 
 # Run the Tkinter main loop
 if __name__ == "__main__":
     root = tk.Tk()
     second_page = SecondPage(root)
+    root.protocol("WM_DELETE_WINDOW", second_page.on_close)
     root.mainloop()
