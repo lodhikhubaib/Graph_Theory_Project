@@ -70,12 +70,30 @@ class SecondPage:
             start_gui = start_algo.GUI()
             start_gui.window.mainloop()
             
-    def on_close(self):
+    '''def on_close(self):
         # Prompt the user with a Yes/No messagebox
         user_response = messagebox.askyesno("Confirmation", "Do you want to close the application?")
         if user_response:
             print("Tkinter application closed.")
+            self.root.destroy()'''
+    
+    def on_close(self):
+    # Prompt the user with a Yes/No messagebox
+        user_response = messagebox.askyesno("Confirmation", "Do you want to close the application?")
+        if user_response:
+            print("Tkinter application closed.")
+        # Hide the current window (assuming it's the 'window' variable from the previous code)
+            #self.window.iconify()
             self.root.destroy()
+        # Open a new application or perform other actions
+            self.End_program()
+
+    def End_program(self):
+        #window.destroy()
+        last_page = importlib.import_module("Last_Page")
+        #last_page_gui = last_page.GUI()
+        #last_page_gui.window.mainloop()
+
 
 
 # Run the Tkinter main loop
