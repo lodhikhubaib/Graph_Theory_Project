@@ -62,9 +62,9 @@ label = tk.Label(main_frame, text=developer_content, bg="white")
 label.grid(padx=12, pady=12)
 
 # Create six canvas widgets
-aahail_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\aahail.ppm" # Replace with the actual path to the image
-khuzaima_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\khuzaima.ppm"# Replace with the actual path to the image
-khubaib_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\khubaib.ppm"  # Replace with the actual path to the image
+aahail_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\aahail.ppm" # Replace with the actual path to the image
+khuzaima_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\khuzaima.ppm"# Replace with the actual path to the image
+khubaib_image_path = r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\khubaib.ppm"  # Replace with the actual path to the image
 
 aahail_details = "Name: Aahil Ashiq Ali\nEmail: aahilashiqali@gmail.com\nLinkedIn: Aahil Ashiq Ali\nUniversity: FAST NUCES, Karachi"
 khubaib_details = "Name: Muhammad Khubaib Khan Lodhi\nEmail: lodhikhubaib12@gmail.com\nLinkedIn: Khubaib Lodhi\nUniversity: FAST NUCES, Karachi"

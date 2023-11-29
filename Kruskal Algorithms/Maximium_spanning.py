@@ -52,7 +52,7 @@ class Graph:
 class GUI:
     def __init__(self):
         self.window = tk.Tk()
-        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\logo.png")
+        icon_image = tk.PhotoImage(file=r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\logo.png")
         self.window.iconphoto(True, icon_image)
         self.window.title("Maximum Spanning Tree")
         self.canvas = tk.Canvas(self.window, width=600, height=400)
@@ -95,7 +95,7 @@ class GUI:
         
         #adding logo                 
         width, height = 200, 100
-        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\logo1.png")
+        original_image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\logo1.png")
         resized_image = original_image.resize((width, height), Image.LANCZOS)
         self.logo_image = ImageTk.PhotoImage(resized_image)
         logo_label = tk.Label(self.window, image=self.logo_image)

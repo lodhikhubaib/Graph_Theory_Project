@@ -9,7 +9,7 @@ class FrontPage:
         self.root.title("Kruskal's Algorithm")
 
         # Load and display an image on the front page
-        image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\src\front_page.jpg")  # Replace "front_page_image.jpg" with your image file
+        image = Image.open(r"C:\Users\HP\OneDrive\Desktop\Graph_Theory_Project\Graph_Theory_Project\Kruskal Algorithms\src\front_page.jpg")  # Replace "front_page_image.jpg" with your image file
         image = image.resize((700, 500), Image.LANCZOS)  # Resize the image as per your requirement
         photo = ImageTk.PhotoImage(image)
 
